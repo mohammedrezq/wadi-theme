@@ -139,7 +139,7 @@ function wadi_widgets_init()
     register_sidebar(array(
             'name' 			=> esc_html__('Wadi footer Column 1', 'wadi'),
             'id'   			=> 'wadi-footer-column-one-widget',
-            'description'   => esc_html__('Wadi footer column one widget position.','wadi'),
+            'description'   => esc_html__('Wadi footer column one widget position.', 'wadi'),
             'before_widget' => '<div id="%1$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2>',
@@ -149,7 +149,7 @@ function wadi_widgets_init()
     register_sidebar(array(
             'name' 			=> esc_html__('Wadi footer Column 2', 'wadi'),
             'id'   			=> 'wadi-footer-column-two-widget',
-            'description'   => esc_html__('Wadi footer column two widget position.','wadi'),
+            'description'   => esc_html__('Wadi footer column two widget position.', 'wadi'),
             'before_widget' => '<div id="%1$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2>',
@@ -159,16 +159,28 @@ function wadi_widgets_init()
     register_sidebar(array(
             'name' 			=> esc_html__('Wadi footer Column 3', 'wadi'),
             'id'   			=> 'wadi-footer-column-three-widget',
-            'description'   => esc_html__('Wadi footer column three widget position.','wadi'),
+            'description'   => esc_html__('Wadi footer column three widget position.', 'wadi'),
             'before_widget' => '<div id="%1$s">',
             'after_widget'  => '</div>',
             'before_title'  => '<h2>',
             'after_title'   => '</h2>'
         ));
-
-
 }
 add_action('widgets_init', 'wadi_widgets_init');
+
+
+/**
+ * Blog Posts Excerpt Length
+ * 
+ * Source: https://developer.wordpress.org/reference/hooks/excerpt_length/
+ *
+ */
+
+function mytheme_custom_excerpt_length($length)
+{
+    return 20;
+}
+add_filter('excerpt_length', 'mytheme_custom_excerpt_length', 999);
 
 /**
  * Enqueue scripts and styles.

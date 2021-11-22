@@ -1,0 +1,36 @@
+.content-area {
+    padding: 60px;
+
+  // Blog Posts Page Grid
+
+  .blog__content-posts {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(600px, 1fr));
+    gap: 2rem;
+
+    .wadi-blog-post-container {
+      display: flex;
+      justify-content: space-between;
+
+      .wadi-blog-thumbnail {
+        min-width: 250px;
+        margin-right: 10px;
+
+        .wadi-post-image__link {
+            display: block;
+            overflow: hidden;
+            
+            img {
+                border-radius: 6px;
+                height: 220px;
+                width: 220px;
+            }
+        }
+      }
+
+      .wadi-blog-post__text {
+          min-width: 350px;
+      }
+    }
+  }
+}
