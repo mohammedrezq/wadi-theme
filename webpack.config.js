@@ -16,6 +16,8 @@ const entry = {
   navigation: [__dirname + `/${assetsFolder}/src/js/navigation.js`],
   mainStyle: [__dirname + `/${assetsFolder}/src/js/mainStyle.js`],
   woocommerceStyle: [__dirname + `/${assetsFolder}/src/js/woocommerceStyle.js`],
+  wadiSearch: [__dirname + `/${assetsFolder}/src/js/wadi-search.js`],
+  wadiHeader: [__dirname + `/${assetsFolder}/src/js/wadi-header.js`],
 };
 const mainDistentation = path.resolve(__dirname, `${assetsFolder}/dist`);
 const output = {

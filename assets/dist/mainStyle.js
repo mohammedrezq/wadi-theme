@@ -1,3 +1,0 @@
-/*! For license information please see mainStyle.js.LICENSE */
-(()=>{"use strict";var s={"./src/sass/style.scss":(e,r,s)=>{s.r(r)}},t={};function o(e){var r=t[e];if(void 0!==r)return r.exports;r=t[e]={exports:{}};return s[e](r,r.exports,o),r.exports}o.r=e=>{"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})};var e={};(()=>{o.r(e);o("./src/sass/style.scss")})()})();
-//# sourceMappingURL=mainStyle.js.map
