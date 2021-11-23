@@ -5,9 +5,55 @@
 .content-area {
     padding: 0;
     margin-bottom: 40px;
+
+    .blog-page-head{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        margin-bottom: 30px;
+    }
     
     .blog__content-posts {
         
+    }
+
+    .wadi-blog-post-container {
+
+        .wadi-blog-thumbnail {
+            min-width: 100vw;
+            height: auto;
+
+            img {
+                min-width: 100%;
+            }
+        }
+
+
+        .wadi-blog-post__text {
+            padding: 20px;
+            .wadi-blog-post__title {
+                margin-bottom: 16px;
+                border-bottom: 1px solid #eee;
+                min-height: 70px;
+                &:hover {
+                  border-bottom: 1px solid #7a7a7a;
+                }
+                
+                a {
+                    color: $dark;
+                    text-decoration: none;
+                    
+                    h2 {
+                      margin-bottom: 0 !important;
+                      &:hover {
+                          color: lighten($dark, 30%);
+                      }
+                  }
+
+              }
+            }
+        }
     }
 
     .wadi-pagination {
@@ -37,7 +83,7 @@
 }
 @media screen and(min-width: 768px) {
     .content-area {
-        padding: 60px;
+        padding: 20px 60px;
     
       // Blog Posts Page Grid
     
@@ -68,6 +114,28 @@
     
           .wadi-blog-post__text {
               min-width: 350px;
+
+              .wadi-blog-post__title {
+                  margin-bottom: 16px;
+                  border-bottom: 1px solid #eee;
+                  min-height: 70px;
+                  &:hover {
+                    border-bottom: 1px solid #7a7a7a;
+                  }
+                  
+                  a {
+                      color: $dark;
+                      text-decoration: none;
+                      
+                      h2 {
+                        margin-bottom: 0 !important;
+                        &:hover {
+                            color: lighten($dark, 30%);
+                        }
+                    }
+
+                }
+              }
           }
         }
       }

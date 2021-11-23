@@ -44,9 +44,7 @@ $the_query = new WP_Query($args);
                         </div>
                         <div class="wadi-blog-post__title">
                         <a href="<?php echo get_permalink(); ?>">    
-                            <h2>
-                                <?php echo get_the_title(); ?>
-                            </h2>
+                            <h2><?php echo get_the_title(); ?></h2>
                         </a>
                         </div>
                         <div class="wadi-blog-post__excerpt">
