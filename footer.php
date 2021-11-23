@@ -76,6 +76,12 @@
 
 
 		</div>
+		<?php
+		/**
+		 * Copyright code
+		 */
+		?>
+		<div class="wadi-copyright__footer">&copy; <?php echo date('Y'); ?> <a href="https://www.wadiweb.com"> Wadiweb.com</a></div>
 	</footer><!-- #colophon -->
 </div><!-- #page -->
 
