@@ -86,4 +86,40 @@
         }
     }
 
+    .entry-footer {
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+
+        .cat-links {
+            margin-right: 8px;
+            a {
+                color: lighten($dark, 30%);
+                text-decoration: none;
+                &:hover {
+                    color: $dark;
+                    border-bottom: 1px solid #ddd;
+                }
+            }
+        }
+        .post-edit-link {
+            width: 100px;
+            padding: 10px;
+            background-color: #39a8ef;
+            text-align: center;
+            border-radius: 4px;
+            border: 1px solid #fff;
+            color: #fff;
+            text-decoration: none;
+            &:hover {
+                background-color: #ffffff;
+                border: 1px solid #000;
+                color: #000;
+                cursor: pointer;
+
+            }
+
+        }
+    }
+
 }

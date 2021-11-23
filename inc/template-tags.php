@@ -110,8 +110,8 @@ if ( ! function_exists( 'wadi_entry_footer' ) ) :
 				),
 				wp_kses_post( get_the_title() )
 			),
-			'<span class="edit-link">',
-			'</span>'
+			// '<span class="edit-link">',
+			// '</span>'
 		);
 	}
 endif;

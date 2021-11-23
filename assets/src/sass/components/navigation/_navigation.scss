@@ -1,0 +1,40 @@
+.post-navigation {
+    
+    .nav-links {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 80px;
+        padding: 16px;
+        margin-top: 20px;
+        font-size: 18px;
+
+        .nav-previous {
+            
+            a {
+                padding: 30px;
+                border: 1px solid #ddd;
+                color: $dark;
+                text-decoration: none;
+                
+                &:hover {
+                    background-color: #39a8ef;
+                    color: #fff;
+                }
+            }
+        }
+        .nav-next {
+            
+            a {
+                padding: 30px;
+                border: 1px solid #ddd;
+                color: $dark;
+                text-decoration: none;
+                &:hover {
+                    background-color: #39a8ef;
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
