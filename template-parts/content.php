@@ -18,7 +18,13 @@
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
 
-		if ( 'post' === get_post_type() ) :
+	?>
+	</header><!-- .entry-header -->
+
+	<?php wadi_post_thumbnail(); ?>
+
+	<?php
+	if ( 'post' === get_post_type() ) :
 			?>
 			<div class="entry-meta">
 				<?php
@@ -27,10 +33,6 @@
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php wadi_post_thumbnail(); ?>
-
 	<div class="entry-content">
 		<?php
 		the_content(
