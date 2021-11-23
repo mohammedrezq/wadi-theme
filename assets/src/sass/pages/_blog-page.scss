@@ -31,7 +31,7 @@
 
 
         .wadi-blog-post__text {
-            padding: 20px;
+            padding: 0 10px 20px;
             .wadi-blog-post__title {
                 margin-bottom: 16px;
                 border-bottom: 1px solid #eee;
@@ -128,6 +128,7 @@
                       text-decoration: none;
                       
                       h2 {
+                        word-break: break-all;
                         margin-bottom: 0 !important;
                         &:hover {
                             color: lighten($dark, 30%);
