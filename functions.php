@@ -185,6 +185,10 @@ add_filter('excerpt_length', 'mytheme_custom_excerpt_length', 999);
 function excerpt_articles($id) {
 
 	$excerpt = get_the_excerpt($id);
+
+    /**
+     * Check if Excerpt Exist if so echo it, else echo 
+     */
 	
     if(! empty($excerpt)) {
          echo $excerpt;
