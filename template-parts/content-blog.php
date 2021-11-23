@@ -12,7 +12,7 @@ $paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
  $args = array(
     'post_status' => 'publish',
     'post_type' => 'post',
-    'posts_per_page' => 4,
+    'posts_per_page' => 6,
     'paged' => $paged,
     'ignore_sticky_posts' => 1
  );
