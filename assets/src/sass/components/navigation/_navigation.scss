@@ -1,38 +1,104 @@
+@media screen and(min-width: 768px) {
+    .post-navigation {
+        margin-top: 40px;
+        .nav-links {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            min-height: 80px;
+            height: auto;
+            margin-top: 20px;
+            font-size: 18px;
+    
+            .nav-previous {
+                max-width: 48%;
+                
+                a {
+                    display: flex;
+                    align-items: center;
+                    padding: 30px;
+                    border: 1px solid #ddd;
+                    color: $dark;
+                    text-decoration: none;
+                    
+                    &:hover, &:focus {
+                        background-color: #39a8ef;
+                        color: #fff;
+                    }
+
+                    .meta-nav {
+                        font-weight: 600;
+                    }
+                }
+            }
+            .nav-next {
+                max-width: 48%;
+                
+                a {
+                    display: flex;
+                    align-items: center;
+                    padding: 30px;
+                    border: 1px solid #ddd;
+                    color: $dark;
+                    text-decoration: none;
+                    &:hover, &:focus {
+                        background-color: #39a8ef;
+                        color: #fff;
+                    }
+
+                    .meta-nav {
+                        font-weight: 600;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .post-navigation {
+    margin-top: 40px;
     
     .nav-links {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        height: 80px;
-        padding: 16px;
+        // display: flex;
+        // justify-content: space-between;
+        // align-items: center;
+        // height: 80px;
         margin-top: 20px;
         font-size: 18px;
 
         .nav-previous {
-            
+            width: 100%;
             a {
+                display: block;
                 padding: 30px;
                 border: 1px solid #ddd;
                 color: $dark;
                 text-decoration: none;
                 
-                &:hover {
+                &:hover, &:focus {
                     background-color: #39a8ef;
                     color: #fff;
+                }
+                .meta-nav {
+                    font-weight: 600;
                 }
             }
         }
         .nav-next {
+            width: 100%;
             
             a {
+                display: block;
                 padding: 30px;
                 border: 1px solid #ddd;
                 color: $dark;
                 text-decoration: none;
-                &:hover {
+                &:hover, &:focus {
                     background-color: #39a8ef;
                     color: #fff;
+                }
+                .meta-nav {
+                    font-weight: 600;
                 }
             }
         }
