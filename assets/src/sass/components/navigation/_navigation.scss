@@ -2,24 +2,33 @@
     .post-navigation {
         margin-top: 40px;
         .nav-links {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+            // display: flex;
+            // justify-content: space-between;
+            // align-items: center;
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fill,minmax(500px,1fr));
             min-height: 80px;
             height: auto;
             margin-top: 20px;
             font-size: 18px;
     
             .nav-previous {
-                max-width: 48%;
+                // max-width: 48%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 
                 a {
                     display: flex;
                     align-items: center;
+                    width: 100%;
                     padding: 30px;
                     border: 1px solid #ddd;
                     color: $dark;
                     text-decoration: none;
+                    min-height: 100%;
                     
                     &:hover, &:focus {
                         background-color: #39a8ef;
@@ -32,15 +41,21 @@
                 }
             }
             .nav-next {
-                max-width: 48%;
+                // max-width: 48%;
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
                 
                 a {
                     display: flex;
                     align-items: center;
+                    width: 100%;
                     padding: 30px;
                     border: 1px solid #ddd;
                     color: $dark;
                     text-decoration: none;
+                    min-height: 100%;
                     &:hover, &:focus {
                         background-color: #39a8ef;
                         color: #fff;
