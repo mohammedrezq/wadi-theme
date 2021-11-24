@@ -48,7 +48,7 @@ $the_query = new WP_Query($args);
                         </a>
                         </div>
                         <div class="wadi-blog-post__excerpt">
-                            <?php echo get_the_excerpt(); ?>
+                            <?php excerpt_articles(the_ID()); ?>
                         </div>
                     </div>
                 </div>

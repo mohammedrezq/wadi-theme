@@ -20,10 +20,10 @@ get_header();
 		
 					the_post_navigation(
 						array(
-							'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post', 'wadi' ) . '</span> ' .
+							'next_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Next Post:', 'wadi' ) . '</span> ' .
 								'<span class="screen-reader-text">' . __( 'Next:', 'wadi' ) . '</span>' .
 								'<span class="post-title">%title</span>',
-							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post', 'wadi' ) . '</span> ' .
+							'prev_text' => '<span class="meta-nav" aria-hidden="true">' . __( 'Previous Post:', 'wadi' ) . '</span> ' .
 								'<span class="screen-reader-text">' . __( 'Previous:', 'wadi' ) . '</span>' .
 								'<span class="post-title">%title</span>',
 						)

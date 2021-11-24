@@ -182,6 +182,30 @@ function mytheme_custom_excerpt_length($length)
 }
 add_filter('excerpt_length', 'mytheme_custom_excerpt_length', 999);
 
+function excerpt_articles($id) {
+
+	$excerpt = get_the_excerpt($id);
+
+    /**
+     * Check if Excerpt Exist if so echo it, else echo 
+     */
+	
+    if(! empty($excerpt)) {
+         echo $excerpt;
+    } else {
+        $field_content = get_post($id);
+
+        $the_content_excerpt = $field_content->post_content;
+        
+        if( !empty( $the_content_excerpt ) ):
+            $trimmed_text = wp_html_excerpt( $the_content_excerpt, 250 );
+            $last_space = strrpos( $trimmed_text, ' ' );
+            $modified_trimmed_text = substr( $trimmed_text, 0, $last_space );
+            echo ''. $modified_trimmed_text ;
+          endif; 
+    }
+}
+
 /**
  * Enqueue scripts and styles.
  */
