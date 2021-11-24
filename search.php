@@ -13,16 +13,22 @@ get_header();
 	<main id="primary" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
+			<div class="search-page wadi-search__form">
+				<?php
+					get_search_form();
+				?>
+			</div>
 
-			<header class="page-header">
-				<h1 class="page-title">
-					<?php
-					/* translators: %s: search query. */
-					printf( esc_html__( 'Search Results for: %s', 'wadi' ), '<span>' . get_search_query() . '</span>' );
-					?>
-				</h1>
-			</header><!-- .page-header -->
-
+			<div class="content-area">
+				<header class="page-header">
+					<h1 class="page-title search-page-head">
+						<?php
+						/* translators: %s: search query. */
+						printf( esc_html__( 'Search Results for: %s', 'wadi' ), '<span>' . get_search_query() . '</span>' );
+						?>
+					</h1>
+				</header><!-- .page-header -->
+                <div class="blog__content-posts">
 			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
@@ -38,7 +44,12 @@ get_header();
 			endwhile;
 
 			the_posts_navigation();
+			?>
 
+
+			</div>
+			</div>
+			<?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
