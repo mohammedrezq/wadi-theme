@@ -7,6 +7,9 @@
  * @package wadi
  */
 
+use Carbon_Fields\Container;
+use Carbon_Fields\Field;
+
 if (! defined('_S_VERSION')) {
     // Replace the version number of the theme on each release.
     define('_S_VERSION', '1.0.0');
@@ -171,7 +174,7 @@ add_action('widgets_init', 'wadi_widgets_init');
 
 /**
  * Blog Posts Excerpt Length
- * 
+ *
  * Source: https://developer.wordpress.org/reference/hooks/excerpt_length/
  *
  */
@@ -182,27 +185,27 @@ function mytheme_custom_excerpt_length($length)
 }
 add_filter('excerpt_length', 'mytheme_custom_excerpt_length', 999);
 
-function excerpt_articles($id) {
-
-	$excerpt = get_the_excerpt($id);
+function excerpt_articles($id)
+{
+    $excerpt = get_the_excerpt($id);
 
     /**
-     * Check if Excerpt Exist if so echo it, else echo 
+     * Check if Excerpt Exist if so echo it, else echo
      */
-	
-    if(! empty($excerpt)) {
-         echo $excerpt;
+    
+    if (! empty($excerpt)) {
+        echo $excerpt;
     } else {
         $field_content = get_post($id);
 
         $the_content_excerpt = $field_content->post_content;
         
-        if( !empty( $the_content_excerpt ) ):
-            $trimmed_text = wp_html_excerpt( $the_content_excerpt, 250 );
-            $last_space = strrpos( $trimmed_text, ' ' );
-            $modified_trimmed_text = substr( $trimmed_text, 0, $last_space );
-            echo ''. $modified_trimmed_text ;
-          endif; 
+        if (!empty($the_content_excerpt)):
+            $trimmed_text = wp_html_excerpt($the_content_excerpt, 250);
+        $last_space = strrpos($trimmed_text, ' ');
+        $modified_trimmed_text = substr($trimmed_text, 0, $last_space);
+        echo ''. $modified_trimmed_text ;
+        endif;
     }
 }
 
@@ -268,4 +271,32 @@ if (defined('JETPACK__VERSION')) {
  */
 if (class_exists('WooCommerce')) {
     require get_template_directory() . '/inc/woocommerce.php';
+}
+
+
+
+/**
+ *
+ * Theme Options - Wadi
+ * @package 1.0.0
+ */
+
+add_action('carbon_fields_register_fields', 'fields_attach_theme_options');
+function fields_attach_theme_options()
+{
+    Container::make('theme_options', __('Theme Options'))
+        ->add_fields(array(
+            Field::make('text', 'crb_text', 'Text Field'),
+        ));
+}
+
+add_action('after_setup_theme', 'wadi_theme_options_load');
+
+function wadi_theme_options_load()
+{
+    require_once('vendor/autoload.php');
+    if(!defined('Carbon_Fields\URL')) {
+        define('Carbon_Fields\URL', get_template_directory_uri() . '/vendor/htmlburger/carbon-fields/');
+    }
+    \Carbon_Fields\Carbon_Fields::boot();
 }

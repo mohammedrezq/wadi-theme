@@ -110,3 +110,8 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Pages
 --------------------------------------------------------------*/
 @import "blocks/blocks";
+
+@font-face {
+	font-family: 'GFS Didot';
+	src: url('../fonts/GFSDidot-Regular.ttf') format("truetype");
+}
