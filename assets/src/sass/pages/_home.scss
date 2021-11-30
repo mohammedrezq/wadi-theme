@@ -7,14 +7,9 @@
       margin: 0;
     }
 
-    font-family: "GFS Didot";
     color: #000;
-    // display: flex;
-    // align-content: center;
-    // justify-content: flex-start;
     display: grid;
     gap: 1rem;
-    // grid-template-columns: repeat(2, 1fr);
     height: auto;
     padding-left: 40px;
     padding-right: 40px;
@@ -66,7 +61,6 @@ Wadi Survey Section Styling
         font-weight: 900;
         color: $main__wadi;
         font-size: 2.2em;
-        font-family: "GFS Didot";
       }
       p {
         font-size: 1.2rem;
@@ -86,14 +80,10 @@ Wadi Survey Section Styling
       }
       height: auto;
       color: #000;
-      // display: flex;
-      // align-content: center;
-      // justify-content: flex-start;
       display: grid;
       gap: 1rem;
       grid-template-columns: repeat(2, 1fr);
       padding-left: 40px;
-      font-family: "GFS Didot";
       padding-right: 40px;
       justify-items: center;
       align-items: center;
@@ -154,7 +144,6 @@ Wadi Survey Section Styling
         flex-direction: column;
         justify-content: center;
         h1 {
-          // font-weight: 700;
           color: $main__wadi;
         }
         p {
@@ -164,8 +153,7 @@ Wadi Survey Section Styling
       .wadi__survey_image {
         padding-left: 40px;
         display: block;
-        // justify-content: center;
-        // align-items: center;
+
         svg {
           width: 350px;
           height: auto;
@@ -183,7 +171,6 @@ Wadi Survey Section Styling
         margin: 30px;
       }
       h1 {
-        font-family: "GFS Didot";
         font-size: 2em;
         color: $main__wadi;
         em {
@@ -207,7 +194,6 @@ Wadi Survey Section Styling
         flex-direction: column;
         justify-content: center;
         h1 {
-          // font-weight: 700;
           color: $main__wadi;
         }
         p {
@@ -230,14 +216,10 @@ Wadi Survey Section Styling
 
 .wadi__how-wp-section {
   display: block;
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
-  // align-items: center;
-  // justify-content: center;
-  // flex-direction: column;
-  // padding: 0 180px;
-
+  margin-bottom: 60px;
   h1 {
     text-align: center;
   }
@@ -247,6 +229,7 @@ Wadi Survey Section Styling
   display: flex;
   align-items: center;
   padding-right: 30px;
+  min-width: 120px;
   color: $main__wadi;
   .wadi_pages_svg {
     width: 100px;
@@ -257,11 +240,77 @@ Wadi Survey Section Styling
 
   svg {
     font-size: 100px;
-    // width: 68px;
-    // height: 68px;
   }
 }
 .wadi__how-item {
   display: flex;
   align-items: center;
+}
+
+@media screen and (max-width: 480px) {
+  .wadi__icon {
+    display: none;
+  }
+}
+
+/***
+Wadiweb Newsletter mailchimp Section Styling
+*/
+
+.wadi__mail-list--mailchimp {
+  background-color: $section__wadi-grey;
+  padding: 60px;
+
+  #mc_embed_signup {
+    background-color: $section__wadi-grey;
+    border: 1px solid #8b8b8b;
+    // border-radius: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .mc-field-group {
+      padding-top: 30px;
+      label {
+        font-size: 1.2rem;
+      }
+    }
+
+    #mc-embedded-subscribe {
+      background-color: $main__wadi;
+      color: white;
+      width: 200px;
+      height: 60px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wadi__mail-list--mailchimp {
+    background-color: $section__wadi-grey;
+    padding: 10px;
+  
+    #mc_embed_signup {
+      background-color: $section__wadi-grey;
+      border: none;
+      border-radius: 0;
+      max-width: 1200px;
+      margin: 0 auto;
+  
+      .mc-field-group {
+        label {
+          font-size: 1.2rem;
+        }
+      }
+  
+      #mc-embedded-subscribe {
+        background-color: $main__wadi;
+        color: white;
+        width: 200px;
+        height: 60px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  
 }
