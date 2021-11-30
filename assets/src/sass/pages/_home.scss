@@ -247,10 +247,11 @@ Wadi Survey Section Styling
   display: flex;
   align-items: center;
   padding-right: 30px;
+  color: $main__wadi;
   .wadi_pages_svg {
     width: 100px;
     height: 100px;
-    background-color: #404040;
+    background-color: $main__wadi;
     border-radius: 12px;
   }
 
