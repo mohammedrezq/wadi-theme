@@ -15,7 +15,8 @@
     }
     
     .blog__content-posts {
-        
+        padding-bottom: 30px;
+        border-bottom: 1px solid #ddd;
     }
 
     .wadi-blog-post-container {
@@ -56,34 +57,42 @@
         }
     }
 
-    .wadi-pagination {
-        margin-top: 80px;
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        text-align: center;
+          /* Pagination */
+          .wadi-pagination {
+            margin-top: 40px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+      
+          .page-numbers {
+              font-size: 1.2rem;
+              margin-right: 8px;
+              padding: 7px 10px;
   
-      .page-numbers {
-          font-size: 1.2rem;
-          margin-right: 8px;
-          &.current {
-              color: #220006;
+              &.current {
+                  color: #fff;
+                  background: #266ecf;
+                  // padding: 7px 14px;
+                  border-radius: 4px;
+              }
           }
-      }
-  
-      a {
-          color: #000;
-          text-decoration: none;
-          &:hover {
-              border-bottom: 1px solid #ccc;
+      
+          a {
+              color: #000;
+              text-decoration: none;
+              &:hover {
+                  background: #266ecf;
+                  color: #fff;
+                  border-radius: 4px;
+              }
           }
-      }
-    }
+        }
 }
 @media screen and(min-width: 768px) {
     .content-area {
-        padding: 20px 60px;
+        padding: 20px 140px;
     
       // Blog Posts Page Grid
     
@@ -143,7 +152,7 @@
     
       /* Pagination */
       .wadi-pagination {
-          margin-top: 80px;
+          margin-top: 40px;
           width: 100%;
           display: flex;
           align-items: center;

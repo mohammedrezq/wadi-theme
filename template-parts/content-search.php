@@ -8,28 +8,25 @@
  */
 
 ?>
-
-<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-
-		<?php if ( 'post' === get_post_type() ) : ?>
-		<div class="entry-meta">
-			<?php
-			wadi_posted_on();
-			wadi_posted_by();
-			?>
-		</div><!-- .entry-meta -->
-		<?php endif; ?>
-	</header><!-- .entry-header -->
-
-	<?php wadi_post_thumbnail(); ?>
-
-	<div class="entry-summary">
-		<?php the_excerpt(); ?>
-	</div><!-- .entry-summary -->
-
-	<footer class="entry-footer">
-		<?php wadi_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-<?php the_ID(); ?> -->
+	<div>
+        <div class="wadi-blog-post-container">
+            <!-- <div class="wadi-blog-thumbnail">
+                <a class="wadi-post-image__link" href="<?php echo get_permalink(); ?>">
+                    <?php echo get_the_post_thumbnail(); ?>
+                </a>
+            </div> -->
+            <div class="wadi-blog-post__text">
+				<div class="wadi-blog-post__title">
+					<a href="<?php echo get_permalink(); ?>">    
+						<h2><?php echo get_the_title(); ?></h2>
+					</a>
+                </div>
+				<div class="wadi-blog-post__date">
+					<?php echo  get_the_date('F j, Y'); ?>
+				</div>
+                <div class="wadi-blog-post__excerpt">
+                    <?php excerpt_articles(the_ID()); ?>
+                </div>
+            </div>
+        </div>
+    </div>

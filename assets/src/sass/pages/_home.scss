@@ -1,0 +1,267 @@
+@import "../abstracts/variables/colors";
+
+.wadi__home-container {
+  .wadi__hero-section {
+    padding: 40px 0;
+    > * {
+      margin: 0;
+    }
+
+    font-family: "GFS Didot";
+    color: #000;
+    // display: flex;
+    // align-content: center;
+    // justify-content: flex-start;
+    display: grid;
+    gap: 1rem;
+    // grid-template-columns: repeat(2, 1fr);
+    height: auto;
+    padding-left: 40px;
+    padding-right: 40px;
+
+    .wadi__hero-contact {
+      display: flex;
+      max-width: 100%;
+      margin-top: 30px;
+
+      .waid__hero-contact-link {
+        color: #fff;
+        font-size: 1.2rem;
+        border-radius: 6px;
+        text-decoration: none;
+        padding: 20px;
+        background-color: #212121;
+        font-weight: 600;
+        text-transform: uppercase;
+
+        &:hover {
+          background-color: #000;
+        }
+      }
+    }
+    .wadi__hero-image {
+      display: none;
+    }
+    h1 {
+      color: $main__wadi;
+      em {
+        color: #616060;
+      }
+    }
+  }
+  /**
+Wadi Survey Section Styling
+*/
+  .wadi__survey-section {
+    background-color: #f7f7f7;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1rem;
+
+    .wadi__survey_text {
+      padding-left: 40px;
+      padding-right: 40px;
+      h1 {
+        font-weight: 900;
+        color: $main__wadi;
+        font-size: 2.2em;
+        font-family: "GFS Didot";
+      }
+      p {
+        font-size: 1.2rem;
+      }
+    }
+    .wadi__survey_image {
+      display: none;
+    }
+  }
+}
+
+@media screen and(min-width: 768px) {
+  .wadi__home-container {
+    .wadi__hero-section {
+      > * {
+        margin: 0;
+      }
+      height: auto;
+      color: #000;
+      // display: flex;
+      // align-content: center;
+      // justify-content: flex-start;
+      display: grid;
+      gap: 1rem;
+      grid-template-columns: repeat(2, 1fr);
+      padding-left: 40px;
+      font-family: "GFS Didot";
+      padding-right: 40px;
+      justify-items: center;
+      align-items: center;
+
+      h1 {
+        font-size: 2.75em;
+        color: $main__wadi;
+        em {
+          color: #616060;
+        }
+      }
+
+      .wadi__hero-text {
+        margin: 0 120px;
+      }
+      .wadi__hero-image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 350px;
+      }
+      .wadi__hero-contact {
+        display: flex;
+        max-width: 100%;
+        margin-top: 30px;
+
+        .waid__hero-contact-link {
+          color: #fff;
+          font-size: 1.2rem;
+          border-radius: 6px;
+          text-decoration: none;
+          padding: 20px;
+          background-color: #212121;
+
+          &:hover {
+            background-color: #000;
+          }
+        }
+      }
+    }
+
+    /**
+        Wadi Survey Section Styling
+    */
+    .wadi__survey-section {
+      background-color: #f7f7f7;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      justify-items: center;
+      align-items: center;
+      padding: 60px;
+
+      .wadi__survey_text {
+        padding-left: 120px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+          // font-weight: 700;
+          color: $main__wadi;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+      .wadi__survey_image {
+        padding-left: 40px;
+        display: block;
+        // justify-content: center;
+        // align-items: center;
+        svg {
+          width: 350px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media screen and(max-width: 1000px) and (min-width: 768px) {
+  .wadi__home-container {
+    .wadi__hero-section {
+      height: auto;
+      .wadi__hero-text {
+        margin: 30px;
+      }
+      h1 {
+        font-family: "GFS Didot";
+        font-size: 2em;
+        color: $main__wadi;
+        em {
+          color: #616060;
+        }
+      }
+    }
+    /**
+        Wadi Survey Section Styling
+    */
+    .wadi__survey-section {
+      background-color: #f7f7f7;
+      height: auto;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+
+      .wadi__survey_text {
+        padding-left: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        h1 {
+          // font-weight: 700;
+          color: $main__wadi;
+        }
+        p {
+          font-size: 1.2rem;
+        }
+      }
+      .wadi__survey_image {
+        padding-left: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        svg {
+          width: 350px;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+.wadi__how-wp-section {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  // align-items: center;
+  // justify-content: center;
+  // flex-direction: column;
+  // padding: 0 180px;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.wadi__icon {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+  color: $main__wadi;
+  .wadi_pages_svg {
+    width: 100px;
+    height: 100px;
+    background-color: $main__wadi;
+    border-radius: 12px;
+  }
+
+  svg {
+    font-size: 100px;
+    // width: 68px;
+    // height: 68px;
+  }
+}
+.wadi__how-item {
+  display: flex;
+  align-items: center;
+}
