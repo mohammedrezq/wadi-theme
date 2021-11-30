@@ -61,7 +61,7 @@ Wadi Survey Section Styling
         font-weight: 900;
         color: $main__wadi;
         font-size: 2.2em;
-          }
+      }
       p {
         font-size: 1.2rem;
       }
@@ -84,7 +84,7 @@ Wadi Survey Section Styling
       gap: 1rem;
       grid-template-columns: repeat(2, 1fr);
       padding-left: 40px;
-        padding-right: 40px;
+      padding-right: 40px;
       justify-items: center;
       align-items: center;
 
@@ -171,7 +171,7 @@ Wadi Survey Section Styling
         margin: 30px;
       }
       h1 {
-            font-size: 2em;
+        font-size: 2em;
         color: $main__wadi;
         em {
           color: #616060;
@@ -219,6 +219,7 @@ Wadi Survey Section Styling
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
+  margin-bottom: 60px;
   h1 {
     text-align: center;
   }
@@ -248,6 +249,68 @@ Wadi Survey Section Styling
 
 @media screen and (max-width: 480px) {
   .wadi__icon {
-      display: none;
+    display: none;
   }
+}
+
+/***
+Wadiweb Newsletter mailchimp Section Styling
+*/
+
+.wadi__mail-list--mailchimp {
+  background-color: $section__wadi-grey;
+  padding: 60px;
+
+  #mc_embed_signup {
+    background-color: $section__wadi-grey;
+    border: 1px solid #8b8b8b;
+    // border-radius: 12px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+    .mc-field-group {
+      padding-top: 30px;
+      label {
+        font-size: 1.2rem;
+      }
+    }
+
+    #mc-embedded-subscribe {
+      background-color: $main__wadi;
+      color: white;
+      width: 200px;
+      height: 60px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wadi__mail-list--mailchimp {
+    background-color: $section__wadi-grey;
+    padding: 10px;
+  
+    #mc_embed_signup {
+      background-color: $section__wadi-grey;
+      border: none;
+      border-radius: 0;
+      max-width: 1200px;
+      margin: 0 auto;
+  
+      .mc-field-group {
+        label {
+          font-size: 1.2rem;
+        }
+      }
+  
+      #mc-embedded-subscribe {
+        background-color: $main__wadi;
+        color: white;
+        width: 200px;
+        height: 60px;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  
 }
