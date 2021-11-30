@@ -227,3 +227,40 @@ Wadi Survey Section Styling
     }
   }
 }
+
+.wadi__how-wp-section {
+  display: block;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+  // align-items: center;
+  // justify-content: center;
+  // flex-direction: column;
+  // padding: 0 180px;
+
+  h1 {
+    text-align: center;
+  }
+}
+
+.wadi__icon {
+  display: flex;
+  align-items: center;
+  padding-right: 30px;
+  .wadi_pages_svg {
+    width: 100px;
+    height: 100px;
+    background-color: #404040;
+    border-radius: 12px;
+  }
+
+  svg {
+    font-size: 100px;
+    // width: 68px;
+    // height: 68px;
+  }
+}
+.wadi__how-item {
+  display: flex;
+  align-items: center;
+}
